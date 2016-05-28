@@ -9,13 +9,14 @@ const styles = StyleSheet.create({
 })
 
 const renderImg = ({ imgSrc, name }) => (
-  <img
-    className={'pure-img ' + css(styles.br)}
-    src={imgSrc}
-    alt={name ? 'User avatar of ' + name : 'User avatar'}></img>
+  <img className={'pure-img ' + css(styles.br)} src={imgSrc} alt={name ? 'User avatar of ' + name : 'User avatar'}></img>
 )
 
-const renderWithAnchor = ({ className, link, imgSrc, name }) => <a className={className} href={link}>{renderImg({ imgSrc, name })}</a>
+const renderWithAnchor = ({ className, link, imgSrc, name }) => (
+  <a className={className} href={link}>
+    {renderImg({ imgSrc, name })}
+  </a>
+)
 
 class Avatar extends React.Component {
   constructor (props) {
