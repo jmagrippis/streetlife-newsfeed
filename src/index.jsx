@@ -2,7 +2,7 @@ import 'babel-polyfill'
 import React from 'react'
 import { render } from 'react-dom'
 import { AppContainer } from 'react-hot-loader'
-import 'normalize.css'
+import 'purecss'
 
 import configureStore from 'store/configureStore'
 import Root from 'layouts/Root'
