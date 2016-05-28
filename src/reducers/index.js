@@ -1,13 +1,9 @@
 import { combineReducers } from 'redux'
 
-const defaultState = {}
-
-const sampleReducer = (state = defaultState, action) => {
-  return state
-}
+import oldestSeen from 'reducers/oldestSeen'
 
 const rootReducer = combineReducers({
-  sampleReducer
+  oldestSeen
 })
 
 export default rootReducer
