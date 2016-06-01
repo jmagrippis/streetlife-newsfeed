@@ -52,7 +52,9 @@ class Message extends React.Component {
               date={postedAt}
               location={author.nearest_area.name} // NOTE: Messages should probably have their own Neighbourhood? What happens when the author moves?
             />
-            <div>{body}</div>
+            <div
+              dangerouslySetInnerHTML={{ __html: body }} // NOTE: We are really trusting the server to not have let naughty HTML through!
+            />
             <div>
               Topics!
             </div>
