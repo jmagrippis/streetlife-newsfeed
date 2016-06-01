@@ -7,8 +7,12 @@ import '../node_modules/purecss/build/grids-responsive.css'
 
 import configureStore from 'store/configureStore'
 import Root from 'layouts/Root'
+import { fetchMessages } from 'reducers/messages'
 
 const store = configureStore()
+
+// Query our API to fetch our initial messages
+store.dispatch(fetchMessages())
 
 render(
   <AppContainer>
